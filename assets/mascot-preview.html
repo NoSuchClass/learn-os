@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><title>learn-os · mascot 候选预览</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+SC:wght@400;600;700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Noto Sans SC', system-ui, sans-serif;
+    background: linear-gradient(180deg, #0a0e27 0%, #05060f 100%);
+    color: #fff;
+    min-height: 100vh;
+    padding: 60px 40px;
+  }
+  h1 { font-size: 36px; margin-bottom: 8px; }
+  .sub { color: #94a3b8; margin-bottom: 40px; font-family: 'JetBrains Mono', monospace; }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 40px;
+  }
+  .card-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 24px; }
+  .card-head h2 { font-size: 28px; }
+  .card-head .tag {
+    font-family: 'JetBrains Mono', monospace; font-size: 14px;
+    padding: 4px 12px; border-radius: 999px;
+    background: rgba(34,211,238,0.12); border: 1px solid rgba(34,211,238,0.4);
+    color: #22d3ee;
+  }
+  .card-head .tag.rec { background: rgba(236,72,153,0.12); border-color: rgba(236,72,153,0.5); color: #f9a8d4; }
+
+  .demo-row { display: flex; gap: 24px; align-items: center; justify-content: space-around; margin-bottom: 24px; }
+  .demo { text-align: center; }
+  .demo svg { display: block; }
+  .demo-label {
+    font-family: 'JetBrains Mono', monospace; font-size: 12px;
+    color: #64748b; margin-top: 10px; letter-spacing: 1px;
+  }
+
+  .bg-a { background: radial-gradient(circle, rgba(34,211,238,0.15), transparent 70%); }
+  .bg-b { background: radial-gradient(circle, rgba(168,85,247,0.15), transparent 70%); }
+  .bg-c { background: radial-gradient(circle, rgba(236,72,153,0.15), transparent 70%); }
+  .bg-light { background: #fef3f7; }
+
+  .circle-bg {
+    width: 180px; height: 180px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .circle-bg.small { width: 100px; height: 100px; }
+
+  .pros { color: #86efac; font-size: 15px; line-height: 1.7; }
+  .pros b { color: #fff; }
+  .cons { color: #fca5a5; font-size: 15px; margin-top: 10px; }
+
+  .names {
+    display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px;
+  }
+  .name {
+    padding: 6px 14px; border-radius: 8px;
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15);
+    font-size: 14px; font-family: 'JetBrains Mono', monospace; color: #cbd5e1;
+  }
+
+  .note {
+    margin-top: 40px;
+    padding: 24px 28px;
+    background: rgba(251, 191, 36, 0.06);
+    border: 1px dashed rgba(251, 191, 36, 0.3);
+    border-radius: 14px;
+    font-size: 14px; color: #fde68a; line-height: 1.6;
+  }
+  .note b { color: #fff; }
+</style></head>
+<body>
+<h1>learn-os · 吉祥物候选</h1>
+<div class="sub">SVG 源文件 · 一键改色 / 改表情 / 改道具</div>
+
+<div class="grid">
+
+  <!-- Option A: Axolotl -->
+  <div class="card">
+    <div class="card-head">
+      <h2>候选 A · 小螈 (Axolotl)</h2>
+      <div class="tag rec">推荐</div>
+    </div>
+
+    <div class="demo-row">
+      <div class="demo">
+        <div class="circle-bg bg-a">
+          <object type="image/svg+xml" data="mascot-axolotl.svg" width="140"></object>
+        </div>
+        <div class="demo-label">ON DARK-TEAL</div>
+      </div>
+      <div class="demo">
+        <div class="circle-bg bg-c">
+          <object type="image/svg+xml" data="mascot-axolotl.svg" width="140"></object>
+        </div>
+        <div class="demo-label">ON DARK-PINK</div>
+      </div>
+      <div class="demo">
+        <div class="circle-bg bg-light">
+          <object type="image/svg+xml" data="mascot-axolotl.svg" width="140"></object>
+        </div>
+        <div class="demo-label">ON LIGHT</div>
+      </div>
+    </div>
+
+    <div class="pros">
+      ✓ <b>独特不撞车</b>（Duolingo owl / GitHub octocat 都没占）<br>
+      ✓ 粉色系天然融入 learn-os 深空渐变<br>
+      ✓ "再生"象征 = 学习不怕重来（犯错就是新特性）<br>
+      ✓ 6 片外鳃形状 = 可做 6 Phase 视觉锚点<br>
+      ✓ 中文萌名空间大
+    </div>
+    <div class="cons">× 知名度不如水豚（但这是差异化优势）</div>
+
+    <div class="names">
+      <div class="name">小螈</div>
+      <div class="name">螈宝</div>
+      <div class="name">Lumi</div>
+      <div class="name">Axie</div>
+      <div class="name">Mochi</div>
+    </div>
+  </div>
+
+  <!-- Option B: Capybara -->
+  <div class="card">
+    <div class="card-head">
+      <h2>候选 B · 胖豚 (Capybara)</h2>
+      <div class="tag">备选</div>
+    </div>
+
+    <div class="demo-row">
+      <div class="demo">
+        <div class="circle-bg bg-a">
+          <object type="image/svg+xml" data="mascot-capybara.svg" width="140"></object>
+        </div>
+        <div class="demo-label">ON DARK-TEAL</div>
+      </div>
+      <div class="demo">
+        <div class="circle-bg bg-b">
+          <object type="image/svg+xml" data="mascot-capybara.svg" width="140"></object>
+        </div>
+        <div class="demo-label">ON DARK-PURPLE</div>
+      </div>
+      <div class="demo">
+        <div class="circle-bg bg-light">
+          <object type="image/svg+xml" data="mascot-capybara.svg" width="140"></object>
+        </div>
+        <div class="demo-label">ON LIGHT</div>
+      </div>
+    </div>
+
+    <div class="pros">
+      ✓ <b>流量密码</b>（2024-2026 现象级可爱动物）<br>
+      ✓ chill vibe 和"不焦虑学习"人设超贴<br>
+      ✓ 咖棕色在深色封面里稳重不抢戏<br>
+      ✓ 四条小腿让它比小螈更容易画"坐着学习"动作
+    </div>
+    <div class="cons">× 撞脸多家品牌（周边、表情包、奶茶店）</div>
+
+    <div class="names">
+      <div class="name">胖豚</div>
+      <div class="name">豆豚</div>
+      <div class="name">Cappy</div>
+      <div class="name">Kibo</div>
+    </div>
+  </div>
+</div>
+
+<div class="note">
+  <b>下一步怎么用：</b>
+  选定一个之后，我会再画 5 个表情变体（开心 · 思考 · 疑惑 · 学习中 · 庆祝）。每张小红书封面的右下角/顶角放对应情绪的 mascot，5 张图读下来就像小螈/胖豚陪你学完一课——<b>这就是 Duolingo 陪伴感的技术落地</b>。<br><br>
+  同时我会写一个 <b>mascot skill</b>：规定每种情绪的使用场景（cover 用开心、problem 用疑惑、usage 用学习中），开源项目的用户也能按这个规范用你的吉祥物。
+</div>
+</body></html>

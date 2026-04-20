@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>learn-os · Day 00 预告封面</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    font-family: 'Noto Sans SC', 'Inter', system-ui, sans-serif;
+    background: #05060f;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .card {
+    width: 1080px;
+    height: 1440px;
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(ellipse 120% 80% at 20% 0%, rgba(99, 102, 241, 0.35) 0%, transparent 55%),
+      radial-gradient(ellipse 100% 70% at 100% 100%, rgba(236, 72, 153, 0.25) 0%, transparent 60%),
+      radial-gradient(ellipse 80% 60% at 50% 50%, rgba(34, 211, 238, 0.12) 0%, transparent 65%),
+      linear-gradient(180deg, #0a0e27 0%, #05060f 50%, #0a0e27 100%);
+  }
+
+  /* 网格背景 */
+  .grid-bg {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse 100% 100% at 50% 50%, black 40%, transparent 85%);
+  }
+
+  /* 光点装饰 */
+  .dot { position: absolute; border-radius: 50%; filter: blur(1px); }
+  .dot-1 { width: 6px; height: 6px; top: 12%; left: 18%; background: #22d3ee; box-shadow: 0 0 20px #22d3ee; }
+  .dot-2 { width: 8px; height: 8px; top: 8%; right: 22%; background: #a855f7; box-shadow: 0 0 24px #a855f7; }
+  .dot-3 { width: 5px; height: 5px; top: 30%; right: 12%; background: #ec4899; box-shadow: 0 0 16px #ec4899; }
+  .dot-4 { width: 4px; height: 4px; bottom: 20%; left: 12%; background: #22d3ee; box-shadow: 0 0 14px #22d3ee; }
+  .dot-5 { width: 7px; height: 7px; bottom: 28%; right: 18%; background: #a855f7; box-shadow: 0 0 20px #a855f7; }
+
+  /* 顶部标签 */
+  .tag-row {
+    position: absolute;
+    top: 72px; left: 80px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 22px; font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 999px;
+    background: rgba(34, 211, 238, 0.12);
+    border: 1.5px solid rgba(34, 211, 238, 0.45);
+    color: #22d3ee;
+    letter-spacing: 0.5px;
+  }
+  .tag-neutral {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1.5px solid rgba(255, 255, 255, 0.15);
+    color: #cbd5e1;
+  }
+
+  /* 标题区 */
+  .title-area {
+    position: absolute;
+    top: 170px; left: 80px; right: 80px;
+  }
+  .title-kicker {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 26px;
+    color: #94a3b8;
+    font-weight: 500;
+    margin-bottom: 24px;
+    letter-spacing: 2px;
+  }
+  .title-kicker .accent { color: #22d3ee; }
+
+  h1 {
+    font-size: 96px;
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -2px;
+    background: linear-gradient(180deg, #fff 0%, #e0e7ff 60%, #a5b4fc 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 20px;
+  }
+  h1 .hl {
+    background: linear-gradient(120deg, #22d3ee 0%, #a855f7 60%, #ec4899 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .subtitle {
+    font-size: 30px;
+    color: #cbd5e1;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 8px;
+  }
+
+  /* 6 层骨架 */
+  .stack {
+    position: absolute;
+    top: 580px; left: 80px; right: 80px;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .layer {
+    display: flex; align-items: center;
+    padding: 20px 28px;
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+    position: relative;
+    overflow: hidden;
+  }
+  .layer::before {
+    content: ''; position: absolute;
+    left: 0; top: 0; bottom: 0; width: 4px;
+  }
+  .layer .num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 18px; font-weight: 600;
+    color: #64748b;
+    width: 56px;
+    letter-spacing: 1px;
+  }
+  .layer .name {
+    font-size: 28px; font-weight: 700;
+    color: #fff;
+    margin-right: 20px;
+    min-width: 240px;
+  }
+  .layer .source {
+    font-size: 20px; font-weight: 400;
+    color: #94a3b8;
+    flex: 1;
+  }
+  .layer .source b { color: #cbd5e1; font-weight: 600; }
+
+  .l1::before { background: #64748b; }
+  .l2::before { background: #22d3ee; }
+  .l3::before { background: #60a5fa; }
+  .l4::before { background: #a855f7; }
+  .l5::before { background: #ec4899; }
+  .l6::before { background: #fbbf24; }
+
+  .l2 .name, .l2 .num { color: #22d3ee; }
+  .l3 .name, .l3 .num { color: #60a5fa; }
+  .l4 .name, .l4 .num { color: #a855f7; }
+  .l5 .name, .l5 .num { color: #ec4899; }
+  .l6 .name, .l6 .num { color: #fbbf24; }
+  .l1 .num { color: #94a3b8; }
+  .l1 .name { color: #e2e8f0; }
+
+  /* 底部 */
+  .footer {
+    position: absolute;
+    bottom: 72px; left: 80px; right: 80px;
+    display: flex; align-items: flex-end; justify-content: space-between;
+  }
+  .footer-left .brand {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 28px; font-weight: 700;
+    color: #fff;
+    letter-spacing: -1px;
+  }
+  .footer-left .brand .slash { color: #22d3ee; }
+  .footer-left .sub {
+    font-size: 20px; color: #64748b;
+    margin-top: 8px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .footer-right {
+    text-align: right;
+  }
+  .footer-right .day {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 20px; color: #64748b;
+    letter-spacing: 1px;
+  }
+  .footer-right .action {
+    font-size: 24px; color: #fff;
+    margin-top: 6px;
+    font-weight: 600;
+  }
+  .footer-right .action .arrow { color: #22d3ee; }
+
+  /* 角落装饰 */
+  .corner-tl {
+    position: absolute; top: 40px; left: 40px;
+    width: 30px; height: 30px;
+    border-top: 2px solid #22d3ee;
+    border-left: 2px solid #22d3ee;
+    opacity: 0.6;
+  }
+  .corner-br {
+    position: absolute; bottom: 40px; right: 40px;
+    width: 30px; height: 30px;
+    border-bottom: 2px solid #a855f7;
+    border-right: 2px solid #a855f7;
+    opacity: 0.6;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="grid-bg"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="dot dot-1"></div>
+  <div class="dot dot-2"></div>
+  <div class="dot dot-3"></div>
+  <div class="dot dot-4"></div>
+  <div class="dot dot-5"></div>
+
+  <div class="tag-row">
+    <div class="tag">30 DAYS</div>
+    <div class="tag tag-neutral">OPEN SOURCE · 教程</div>
+  </div>
+
+  <div class="title-area">
+    <div class="title-kicker">Cursor · <span class="accent">learn-os</span> · Day 00</div>
+    <h1>
+      30 天搭一个<br>
+      <span class="hl">AI 学习系统</span>
+    </h1>
+    <div class="subtitle">
+      从"学什么"到"讲清楚"的完整流水线<br>
+      每天搭一块，30 天跑通闭环
+    </div>
+  </div>
+
+  <div class="stack">
+    <div class="layer l6">
+      <div class="num">L6</div>
+      <div class="name">进化层</div>
+      <div class="source">Instinct · <b>CoVe + 持续学习</b></div>
+    </div>
+    <div class="layer l5">
+      <div class="num">L5</div>
+      <div class="name">输出层</div>
+      <div class="source"><b>金字塔原理</b> + 费曼 + 刻意练习</div>
+    </div>
+    <div class="layer l4">
+      <div class="num">L4</div>
+      <div class="name">练习层</div>
+      <div class="source"><b>认知天性</b> + 艾宾浩斯 + Bloom</div>
+    </div>
+    <div class="layer l3">
+      <div class="num">L3</div>
+      <div class="name">组织层</div>
+      <div class="source"><b>Karpathy LLM Wiki</b> + 编年史</div>
+    </div>
+    <div class="layer l2">
+      <div class="num">L2</div>
+      <div class="name">输入层</div>
+      <div class="source">面经情报站 + <b>《学习之道》</b></div>
+    </div>
+    <div class="layer l1">
+      <div class="num">L1</div>
+      <div class="name">对话层</div>
+      <div class="source">澄清 · 自质疑 · 去 AI 味 · 多模型</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-left">
+      <div class="brand">learn<span class="slash">/</span>os</div>
+      <div class="sub">github.com/learn-os</div>
+    </div>
+    <div class="footer-right">
+      <div class="day">DAY 00 → DAY 30</div>
+      <div class="action">明天开始 <span class="arrow">→</span></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
