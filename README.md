@@ -1,5 +1,11 @@
 # learn-os
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-1e1b4b.svg)](./LICENSE)
+[![Skills](https://img.shields.io/badge/Skills-3%20%2F%2030-ec4899)](./skills)
+[![Phase](https://img.shields.io/badge/Phase-A%20%C2%B7%20%E5%AF%B9%E8%AF%9D%E5%9F%BA%E7%A1%80-06b6d4)](#phase-1--对话基础day-01-05)
+[![Status](https://img.shields.io/badge/status-building-f59e0b)](https://github.com/NoSuchClass/learn-os)
+[![Cursor](https://img.shields.io/badge/Cursor-compatible-a855f7)](https://cursor.com)
+
 > 用 30 天，在 Cursor 里搭一个 AI 学习操作系统。
 > 30 个 Skills 组成完整闭环：从"学什么"到"讲清楚"。
 
