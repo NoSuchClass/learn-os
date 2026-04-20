@@ -1,4 +1,4 @@
-# learn-os · Logo & Mascot Prompts
+# Lumi · Logo & Mascot Prompts
 
 > 用于 nanobanana / Gemini 2.5 Flash Image / Midjourney / Seedream。
 > 核心原则：**先 lock 风格，再换姿势/表情**，保持同一吉祥物一致性。
@@ -162,7 +162,7 @@ Background:      #0a0e27  (deep space navy, for dark theme)
 White sparkle:   #ffffff
 ```
 
-全部颜色都和 `learn-os/assets/cover-day-00.html` 封面深空渐变一脉相承。
+全部颜色都和 `assets/cover-day-00.html` 封面深空渐变一脉相承。
 
 ---
 
@@ -171,7 +171,7 @@ White sparkle:   #ffffff
 建议命名（方便脚本引用）：
 
 ```
-learn-os/assets/
+assets/
 ├── mascot/
 │   ├── mascot-main.png          # A1
 │   ├── mascot-thinking.png      # A2

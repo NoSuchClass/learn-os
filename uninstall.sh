@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-# 移除所有 learn-os-* skills
+# 移除所有 lumi-* skills
 set -e
 TARGET_DIR="${CURSOR_SKILLS_DIR:-$HOME/.cursor/skills}"
-echo "→ 从 $TARGET_DIR 移除 learn-os-*"
+echo "→ 从 $TARGET_DIR 移除 lumi-*"
 removed=0
-for d in "$TARGET_DIR"/learn-os-*; do
+for d in "$TARGET_DIR"/lumi-*; do
   [ -e "$d" ] || continue
   rm -rf "$d"
   echo "  ✗ $(basename "$d")"

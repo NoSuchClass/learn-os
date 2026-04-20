@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# learn-os skill installer
+# lumi skill installer
 # Usage:
 #   bash install.sh                  # 安装全部已产出的 skills
 #   bash install.sh clarify journal  # 只装指定 skills
@@ -43,7 +43,7 @@ echo
 
 for skill in "${SKILLS[@]}"; do
   src="$SOURCE_DIR/$skill"
-  dst="$TARGET_DIR/learn-os-$skill"
+  dst="$TARGET_DIR/lumi-$skill"
 
   if [ ! -d "$src" ]; then
     echo "  ⚠ 跳过 $skill（不存在于 skills/）"
