@@ -1,7 +1,7 @@
 <p align="center">🌏&nbsp;&nbsp;English&nbsp;&nbsp;·&nbsp;&nbsp;<a href="./README.md">中文</a></p>
 
 <p align="center">
-  <img src="./assets/mascot/mascot.png" alt="Lumi mascot" width="200" />
+  <img src="./assets/readme-banner.png" alt="Lumi banner" width="100%" />
 </p>
 
 <h1 align="center">Lumi</h1>
